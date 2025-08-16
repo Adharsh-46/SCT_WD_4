@@ -2,19 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>To-Do List</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cool To-Do List</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="container">
-    <h1> My Tasks</h1>
-    <div class="input-group">
-      <input type="text" id="taskInput" placeholder="Add a new task..." />
-      <button id="addBtn">Add</button>
-    </div>
-    <ul id="taskList"></ul>
+  <div class="todo-container">
+    <h1>🌟 To-Do List</h1>
+
+    <form id="task-form" class="input-section">
+      <input type="text" id="task-input" placeholder="Enter task..." required />
+      <input type="datetime-local" id="task-datetime" required />
+      <button type="submit">Add Task</button>
+    </form>
+
+    <ul id="task-list" aria-live="polite"></ul>
+    <p id="empty-state">No tasks yet — add your first one! ✨</p>
   </div>
-  <script src="script.js"></script>
+
+  <!-- Defer ensures the JS runs after the DOM is parsed -->
+  <script src="script.js" defer></script>
 </body>
 </html>
